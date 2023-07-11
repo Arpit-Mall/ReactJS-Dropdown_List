@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import Header from "./components/Header";
+import Dropdown from "./components/Dropdown";
 import './App.css';
 
 function App() {
+
+  // These items would be displayed in the dropdown menu
+  const options = ["Yes", "No", "Probably Not"];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      
+      {/* Question  */}
+      <h1>Q. Should you use a dropdown ?</h1>
+
+      <Dropdown options={options} />
     </div>
+
   );
 }
 
